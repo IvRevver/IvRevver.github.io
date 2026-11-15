@@ -1,0 +1,9 @@
+# Системный и редакторский мусор
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Логи
+*.log

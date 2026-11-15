@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>IvRevver</title>
+  <meta name="description" content="Портфолио Шаманаева Ивана Сергеевича, студента математико-механического факультета СПбГУ.">
+  <meta name="author" content="Шаманаев Иван Сергеевич">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Шаманаев Иван Сергеевич — портфолио">
+  <meta property="og:description" content="Студент математико-механического факультета СПбГУ. Проекты по теории графов и программированию.">
+  <!-- TODO: для корректного превью в соцсетях нужно абсолютный URL картинки -->
+  <meta property="og:image" content="assets/img/photo-placeholder.svg">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#2c3e50">
+
+  <!-- Одна палитра для светлого и тёмного режимов -->
+  <link rel="stylesheet" href="assets/vendor/themes/flatly.min.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+
+</head>
+
+<body>
+
+  <!-- Inline-спрайт иконок Bootstrap Icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none" aria-hidden="true" focusable="false">
+    <symbol id="i-mortarboard" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/> <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/></symbol>
+
+
+    <symbol id="i-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></symbol>
+
+    <symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></symbol>
+    <symbol id="i-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></symbol>
+
+    <symbol id="i-arrow-up-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/></symbol>
+
+
+
+
+
+
+    <symbol id="i-collection-fill" viewBox="0 0 16 16"><path d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1"/></symbol>
+
+
+
+
+
+  </svg>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ================= Навигация ================= -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-portfolio sticky-top" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <span class="brand-text">IvRevver</span>
+      </a>
+
+      <input class="visually-hidden nav-toggle-input" type="checkbox" id="navToggle" aria-label="Меню навигации">
+      <label class="navbar-toggler" for="navToggle">
+        <span class="navbar-toggler-icon"></span>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bio">Биография</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Проекты</a></li>
+        </ul>
+
+        <div class="theme-switch ms-lg-3 mb-3 mb-lg-0" role="radiogroup" aria-label="Цветовая тема">
+          <input class="visually-hidden theme-radio" type="radio" name="color-theme" id="themeLight" value="light">
+          <label class="theme-option" for="themeLight" title="Светлая тема">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+            </svg>
+            <span class="visually-hidden">Светлая тема</span>
+          </label>
+          <input class="visually-hidden theme-radio" type="radio" name="color-theme" id="themeDark" value="dark">
+          <label class="theme-option" for="themeDark" title="Тёмная тема">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/>
+            </svg>
+            <span class="visually-hidden">Тёмная тема</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ================= Главная ================= -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <p class="hero-eyebrow">Привет, я</p>
+            <h1 class="hero-title">
+              Шаманаев<br>
+              <span class="accent">Иван Сергеевич</span>
+            </h1>
+            <p class="hero-lead mb-4">
+              Студент математико-механического факультета СПбГУ. Увлекаюсь
+              программированием, музыкой и математикой.
+            </p>
+
+            <div class="hero-tags d-flex flex-wrap gap-2 mb-4">
+              <span class="badge rounded-pill">
+                <svg class="icon" aria-hidden="true"><use href="#i-mortarboard"/></svg>
+                Математико-механический факультет СПбГУ
+              </span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <a class="btn btn-primary btn-lg" href="#projects">
+                Смотреть проекты
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+              </a>
+            </div>
+
+            <div class="hero-social">
+              <a class="btn btn-sm btn-ghost" href="https://github.com/IvRevver" rel="noopener noreferrer" target="_blank">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                GitHub
+              </a>
+              <a class="btn btn-sm btn-ghost" href="https://t.me/IvRevolver" rel="noopener noreferrer" target="_blank">
+                <svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg>
+                Telegram
+              </a>
+              <a class="btn btn-sm btn-ghost" href="mailto:van.shamanaev@gmail.com">
+                <svg class="icon" aria-hidden="true"><use href="#i-envelope-fill"/></svg>
+                Почта
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-photo">
+              <div class="hero-photo-frame">
+                <!-- TODO: замените на своё фото 4:5 (например assets/img/photo.jpg) -->
+                <img src="assets/img/photo-placeholder.svg" width="800" height="1000" alt="Место для фотографии Ивана Сергеевича Шаманаева" fetchpriority="high">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Биография ================= -->
+    <section id="bio" class="section section-alt" aria-labelledby="bio-title">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4">
+            <p class="section-eyebrow"><span class="num">01</span> Обо мне</p>
+            <h2 class="section-title" id="bio-title">Биография</h2>
+            <p class="section-lead mb-0">
+              СПбГУ, системное программирование, математика, музыка.
+            </p>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="bio-text">
+              <p class="mb-0">
+                Родом из Сибирских Афин. Хорошо сдал ЕГЭ и поступил в СПбГУ. Программированием заинтересовался в 2021 году.
+                Математика нравилась с самого детства.
+                В школьные годы собрал 2 рок группы, сейчас пою в 2 хорах и играю в оркестре.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-lg-4 mt-4 mt-lg-5">
+          <div class="col-md-6 reveal">
+            <div class="fact-card card-hover">
+              <div class="fact-icon mb-3">
+                <svg class="icon" aria-hidden="true"><use href="#i-mortarboard"/></svg>
+              </div>
+              <h3 class="h6 text-uppercase text-body-secondary mb-2">Где учусь</h3>
+              <p class="mb-0 fw-semibold">СПбГУ, МатМех, Программная инженерия</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 reveal">
+            <div class="fact-card card-hover">
+              <div class="fact-icon mb-3">
+                <svg class="icon" aria-hidden="true"><use href="#i-heart-fill"/></svg>
+              </div>
+              <h3 class="h6 text-uppercase text-body-secondary mb-2">Увлечения</h3>
+              <p class="mb-0 small text-body-secondary">
+                Программирование, математика и музыка.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Навыки ================= -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="row justify-content-between align-items-end g-3 mb-4 mb-lg-5">
+          <div class="col-lg-7">
+            <p class="section-eyebrow"><span class="num">02</span> Навыки</p>
+            <h2 class="section-title" id="skills-title">Что я умею</h2>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="card card-hover h-100">
+              <div class="card-body p-4">
+                <h3 class="h5 mb-3">Языки программирования</h3>
+                <div class="tag-list">
+                  <span class="badge rounded-pill">C</span>
+                  <span class="badge rounded-pill">Python</span>
+                  <span class="badge rounded-pill">Kotlin</span>
+                  <span class="badge rounded-pill">SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="card card-hover h-100">
+              <div class="card-body p-4">
+                <h3 class="h5 mb-3">Веб-разработка</h3>
+                <div class="tag-list">
+                  <span class="badge rounded-pill">HTML</span>
+                  <span class="badge rounded-pill">CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="card card-hover h-100">
+              <div class="card-body p-4">
+                <h3 class="h5 mb-3">Инструменты</h3>
+                <div class="tag-list">
+                  <span class="badge rounded-pill">LaTeX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Проекты ================= -->
+    <section id="projects" class="section section-alt" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="row justify-content-between align-items-end g-3 mb-4 mb-lg-5">
+          <div class="col-lg-7">
+            <p class="section-eyebrow"><span class="num">03</span> Проекты</p>
+            <h2 class="section-title" id="projects-title">Проекты</h2>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-6 reveal">
+            <article class="card project-card card-hover h-100">
+              <div class="project-media">
+                <svg class="icon" aria-hidden="true"><use href="#i-collection-fill"/></svg>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="project-title h4 mb-2">SSSP GraphBLAS</h3>
+                <p class="text-body-secondary mb-0">
+                  Реализация и сравнительный анализ алгоритмов Single-Source
+                  Shortest Path (SSSP) на базе SuiteSparse GraphBLAS и LAGraph.
+                </p>
+                <a class="btn btn-sm btn-ghost mt-3" href="https://github.com/IvRevver/graph_blas_sssp" rel="noopener noreferrer" target="_blank">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                  Репозиторий на GitHub
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Футер ================= -->
+  <footer class="footer">
+    <div class="container">
+      <address class="footer-contacts mb-3" aria-label="Контактные данные">
+        <a href="mailto:van.shamanaev@gmail.com">
+          <svg class="icon" aria-hidden="true"><use href="#i-envelope-fill"/></svg>
+          van.shamanaev@gmail.com
+        </a>
+        <a href="https://t.me/IvRevolver" rel="noopener noreferrer" target="_blank">
+          <svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg>
+          @IvRevolver
+        </a>
+        <a href="https://github.com/IvRevver" rel="noopener noreferrer" target="_blank">
+          <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+          github.com/IvRevver
+        </a>
+      </address>
+      <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-2">
+        <p class="mb-0">© 2026 Шаманаев Иван Сергеевич</p>
+        <p class="mb-0">
+          HTML · CSS · Bootstrap 5 ·
+          <a href="#home">Наверх ↑</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Шаманаев Иван Сергеевич",
+      "jobTitle": "Студент математико-механического факультета СПбГУ",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Санкт-Петербургский государственный университет"
+      },
+      "email": "mailto:van.shamanaev@gmail.com",
+      "url": "https://github.com/IvRevver"
+    }
+  </script>
+</body>
+</html>
